@@ -26,8 +26,8 @@ export function loadHeaderFooter() {
             <p>Phone: (208) 656-3205</p>
         </section>
         <section class="social-media">
-            <a href="https://www.facebook.com/madisonridgechiro/" target="_blank"><img src="/images/facebook_icon.png" alt=""></a>
-            <a href="https://x.com/Madison_Ridge" target="_blank"><img src="/images/twitter_icon.png" alt=""></a>
+            <a href="https://www.facebook.com/madisonridgechiro/" target="_blank"><img src="/images/gray-facebook-icon.svg" alt="Facebook Icon"></a>
+            <a href="https://x.com/Madison_Ridge" target="_blank"><img src="/images/gray-twitter-icon.svg" alt="Twitter Icon"></a>
         </section>
         <section class="hours">
             <h4>Hours</h4>
@@ -36,15 +36,36 @@ export function loadHeaderFooter() {
             <p>Sunday: Closed</p>
         </section>
     `;
+
+    // Call function after header loads
+    setActiveNav();
+}
+
+function setActiveNav() {
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // Remove trailing slash
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href").replace(/\/$/, ""); // Remove trailing slash from href
+
+        if (linkPath === currentPath) {
+            link.parentElement.classList.add("active");
+        } else {
+            link.parentElement.classList.remove("active");
+        }
+    });
 }
 
 export function initHamburgerMenu() {
     const hamburger = document.querySelector(".hamburger");
     const nav = document.querySelector("nav");
+    
+    console.log("Hamburger button Init")
 
     if (hamburger && nav) {
         hamburger.addEventListener("click", () => {
             nav.classList.toggle("open");
+            console.log("Hamburger button pressed")
         });
     }
 }
@@ -52,3 +73,15 @@ export function initHamburgerMenu() {
 function getYear() {
     return new Date().getFullYear();
 }
+
+// Function to load a JSON file from a given path
+export async function loadJSON(path) {
+    try {
+      const response = await fetch(path);
+      if (!response.ok) throw new Error(`Failed to load ${path}: ${response.statusText}`);
+      return await response.json();
+    } catch (error) {
+      console.error('Error loading JSON:', error);
+      return null;
+    }
+  }

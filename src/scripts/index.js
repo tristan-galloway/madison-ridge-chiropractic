@@ -1,21 +1,9 @@
-import { loadHeaderFooter, initHamburgerMenu } from "./utilities";
+import { loadHeaderFooter, initHamburgerMenu, loadJSON } from "./utilities";
 
 loadHeaderFooter();
 initHamburgerMenu();
 initServices();
 initReviews();
-
-// Function to load a JSON file from a given path
-async function loadJSON(path) {
-  try {
-    const response = await fetch(path);
-    if (!response.ok) throw new Error(`Failed to load ${path}: ${response.statusText}`);
-    return await response.json();
-  } catch (error) {
-    console.error('Error loading JSON:', error);
-    return null;
-  }
-}
 
 // Function to update the DOM with service content
 function updateServiceContent(data, serviceTitles, currentServiceIndex) {
