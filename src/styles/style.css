@@ -72,7 +72,6 @@ nav ul li a {
   position: relative;
   display: inline-block;
 }
-/* Animated Underline */
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -86,6 +85,12 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
   left: 0;
+}
+nav ul li.active a {
+  color: var(--primary-color);
+  background-color: var(--text-light);
+  position: relative;
+  border-radius: 5px;
 }
 .hamburger {
   display: none;

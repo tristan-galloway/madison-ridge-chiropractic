@@ -4,15 +4,14 @@ export function loadHeaderFooter() {
     const year = getYear();
 
     header.innerHTML = `
-        <a id="logo" href=""><img src="/src/images/madison-ridge-chiropractic.png" alt="Logo"></a>
+        <a id="logo" href=""><img src="/images/madison-ridge-chiropractic.png" alt="Logo"></a>
         <button class="hamburger" aria-label="Toggle Menu">
             &#9776;
         </button>
         <nav>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Review Us</a></li>
-                <li><a href="#">Forms</a></li>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/review_us/">Review Us</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Schedule</a></li>
             </ul>
@@ -27,8 +26,8 @@ export function loadHeaderFooter() {
             <p>Phone: (208) 656-3205</p>
         </section>
         <section class="social-media">
-            <a href="https://www.facebook.com/madisonridgechiro/" target="_blank"><img src="/src/images/facebook_icon.png" alt=""></a>
-            <a href="https://x.com/Madison_Ridge" target="_blank"><img src="/src/images/twitter_icon.png" alt=""></a>
+            <a href="https://www.facebook.com/madisonridgechiro/" target="_blank"><img src="/images/facebook_icon.png" alt=""></a>
+            <a href="https://x.com/Madison_Ridge" target="_blank"><img src="/images/twitter_icon.png" alt=""></a>
         </section>
         <section class="hours">
             <h4>Hours</h4>

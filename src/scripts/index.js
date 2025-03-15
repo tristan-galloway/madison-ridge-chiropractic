@@ -32,7 +32,7 @@ function updateServiceContent(data, serviceTitles, currentServiceIndex) {
 
 // Function to initialize the service rotation
 async function initServices() {
-  const data = await loadJSON('/src/data/services.json');
+  const data = await loadJSON('json/services.json');
   if (!data) return;
 
   const serviceTitles = Object.keys(data);
@@ -65,7 +65,7 @@ function updateReviewContent(reviews, currentReviewIndex) {
 
 // Function to initialize the review rotation
 async function initReviews() {
-  const data = await loadJSON('/src/data/reviews.json'); // Adjust path as needed
+  const data = await loadJSON('/json/reviews.json'); // Adjust path as needed
   if (!data || !data.reviews || data.reviews.length === 0) return;
 
   const reviews = data.reviews;
