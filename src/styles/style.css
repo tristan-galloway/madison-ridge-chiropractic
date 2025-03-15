@@ -404,18 +404,6 @@ footer a {
     margin-top: 10px;
   }
 
-  /* Review Section */
-  .review {
-    flex-direction: column;
-    text-align: center;
-  }
-  .review p {
-    margin-bottom: 10px;
-  }
-  .review button {
-    margin-top: 10px;
-  }
-
   /* Footer Section */
   footer {
     flex-direction: column;
