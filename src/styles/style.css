@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Global Variables */
+:root {
+  --primary-color: #710203; /* Blood Red */
+  --secondary-color: #525252; /* Davy’s Gray */
+  --text-light: #f5f5f5;
+  --text-dark: #222;
+  --font-header: 'Montserrat', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+}
+
+/* CSS Reset - Modern Reset for Cross-Browser Consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--text-light);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+h2 {
+  color: var(--primary-color);
+}
+
+/* General Header Styling */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: 1100;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+#logo img {
+  height: 50px;
+  width: auto;
+  border-radius: 5px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-light);
+  font-size: 16px;
+  padding: 10px 15px;
+  font-family: var(--font-body);
+  position: relative;
+  display: inline-block;
+}
+/* Animated Underline */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--text-light);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+/* Main Section */
+main {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 10px;
+}
+.hero-content {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 600px;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-family: var(--font-header);
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.cta-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 2;  /* Keeps the button above the background image */
+}
+.cta-button:hover {
+  background-color: #940103;
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+.services-section h2 {
+  font-family: var(--font-header);
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.service {
+  color: var(--text-light);
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 30px auto;
+  gap: 20px;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  min-height: 400px;
+}
+.service h3 {
+  font-size: 24px;
+  font-family: var(--font-header);
+  margin: 0;
+  text-align: center;
+  grid-column: span 3;
+}
+.service img {
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  grid-column: 1;
+  margin: 0 auto;
+}
+.service-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: span 3;
+  gap: 20px;
+}
+.service p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+.service-content button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.service-content button img {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--text-light);
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+.service-content button:hover img {
+  transform: scale(1.2);
+}
+
+/* Reviews Section */
+.reviews-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+.reviews-section h2 {
+  font-family: var(--font-header);
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  color: var(--text-light);
+}
+.review p {
+  font-size: 16px;
+  padding: 20px;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+.review p strong {
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+.review button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+}
+.review button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--text-light);
+  transition: transform 0.3s ease;
+}
+.review button:hover img {
+  transform: scale(1.2);
+}
+
+
+/* Footer Section */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer section {
+  margin: 10px;
+}
+footer p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  margin: 5px 0;
+}
+footer a {
+  color: var(--text-light);
+}
+.social-media {
+  background-color: white;
+  border-radius: 10px;
+  display: flex; /* Use flexbox to center the items */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+.social-media a {
+  display: flex; /* Ensure each link is a flex container */
+  justify-content: center; /* Center image horizontally inside link */
+  align-items: center; /* Center image vertically inside link */
+  margin: 5px; /* Add space between icons */
+}
+.social-media img {
+  width: 80px; /* Adjust based on actual icon size */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.social-media a:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Header Section */
+  .hamburger {
+    display: block;
+  }
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    width: 100%;
+  }
+  nav.open {
+    max-height: 350px;
+  }
+
+  /* Hero Section */
+
+  /* Services Section */
+  .service {
+    grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+    grid-template-rows: auto;
+    text-align: center;
+  }
+  .service img {
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0 auto 20px;
+  }
+  .service p {
+    margin-bottom: 20px;
+  }
+  .service-content {
+    flex-direction: column;
+    align-items: center; /* Center the content on small screens */
+    gap: 10px;
+  }
+  .service-content button {
+    margin-top: 10px;
+  }
+
+  /* Review Section */
+  .review {
+    flex-direction: column;
+    text-align: center;
+  }
+  .review p {
+    margin-bottom: 10px;
+  }
+  .review button {
+    margin-top: 10px;
+  }
+
+  /* Footer Section */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

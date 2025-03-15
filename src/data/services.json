@@ -1,0 +1,42 @@
+{
+    "Myofascial Release": {
+      "body": "Myofascial release is an intervention administered to various patients to alleviate pain or restrictive tissue problems. The release treatment usually involves the application of gentle or moderate pressure on the connective tissues and leads to relaxation and eventual elongation of the fascia therein. These restrictions are often caused by traumatic accidents or inflammations of the soft tissue. Some patients get them as an after-effect of surgery. They always result in muscular tension and spasm of sharp pain. They cannot be detected through standard diagnosis tests like the x-ray scan. It is essential for a patient to visit a doctor or physiotherapy expert once they notice restriction of movement in the hip area or shoulder. Painful backs can also be a sign of the restriction and can only be treated through the Myofascial Release procedures.",
+      "img": "/src/images/myofascial-release.jpg",
+      "icon": "/src/images/myofascial-icon.png"
+    },
+    "Chiropractic Care": {
+      "body": "We specialize in correcting your body’s misalignments. Our goal is to ensure that your spine and the rest of your body are working harmoniously. To do so, we will help you develop a plan that will require light stretching, some exercise, chiropractic care, and a healthy diet.",
+      "img": "/src/images/chiropractic-care.jpg",
+      "icon": "/src/images/chiropractic-icon.png"
+    },
+    "Corrective Exercises": {
+      "body": "Corrective exercises are the use of bodily movements and/or postures to restore desirable changes in diseased or injured tissues. The corrective exercises are movement strategies that minimize or eliminate compensation. Corrective exercises should precede more integrated exercises, because they can cue the patient’s motor system to respond in a more desirable way and assist in removing or improving biomechanical constraints.",
+      "img": "/src/images/corrective-exercises.jpg",
+      "icon": "/src/images/corrective-exercises.png"
+    },
+    "Lifestyle Advice": {
+      "body": "Our team here at Madison Ridge Chiropractic is dedicated to helping you achieve your long-term health and wellness goals by offering you reliable lifestyle advice. If you are not sure if the lifestyle choices you are making are worsening or improving your condition, we are here to help. We address the typical chiropractic issues as well as coach our patients to live a healthier life by looking at the individual as a whole mentally, physically and emotionally.",
+      "img": "/src/images/lifestyle-advice.jpg",
+      "icon": "/src/images/lifestyle-advice.png"
+    },
+    "Massage Therapy": {
+      "body": "Massage therapy is the manual manipulation of soft body tissues (muscle, connective tissue, tendons and ligaments) to enhance a person’s health and well-being. There are many types of massage therapy methods (also called modalities). People seek massage therapy for a variety of reasons; for example, to reduce stress and anxiety, to relax muscles, to rehabilitate injuries, to reduce pain and to promote overall health and wellness.",
+      "img": "/src/images/massage-therapy.jpg",
+      "icon": "/src/images/message-therapy.png"
+    },
+    "Kinesio Taping": {
+      "body": "Kinesiology Taping is a precise rehabilitative taping technique that is designed to facilitate the body’s natural healing process while providing support and stability to muscles and joints. This technique allows the body’s normal range of motion as well as providing extending soft tissue manipulation to prolong the benefits of manual therapy administered within the clinical setting. Kinesio tape is latex-free and hypoallergenic which makes it “skin friendly” for patients with sensitive or fragile skin; such as, patients with diabetes, fibromyalgia or rheumatoid arthritis.",
+      "img": "/src/images/kinesio-taping.jpg",
+      "icon": "/src/images/kinesio-taping.png"
+    },
+    "Decompression Therapy": {
+      "body": "Spinal decompression is a non-invasive mechanical procedure performed within our office to help alleviate back pain. It involves gently stretching the spine to take pressure off the spinal discs (the cushions that separate the vertebrae in the spine). By relieving this pressure, bulging discs can retract back into place which takes pressure off the nerves in the spine. By decompressing the spine, it permits water, oxygen and other fluids to work their way back into the discs allowing them to heal naturally. Spinal decompression is an excellent option for anyone with chronic back pain who wants to get back to living a pain-free life as quickly as possible.",
+      "img": "/src/images/no_img.png",
+      "icon": "/src/images/no_img.png"
+    },
+    "Sports Medicine": {
+      "body": "At Madison Ridge Chiropractic, we are proud to provide our clients access to state-of-the-art sports recovery techniques and equipment. Whether you are a professional athlete or a dedicated weekend warrior, everyone can benefit from sports recovery. Sports recovery treatments help restore your body to its natural state and assist in the recovery process so that you can be at full strength and ready for your next workout. Our innovative services include everything you need to help you recover from a hard workout and prepare you for the next one.Our recovery services include massage therapy, chiropractic care, heat and ice therapy, stretching, personal training, nutritional counseling, and more.The goal of our sports recovery services is to help your body relax and recover effectively from post-workout muscle fatigue and soreness. Our team is here to design a recovery plan for your unique needs so that your body can recover and become stronger.",
+      "img": "/src/images/sports-medicine.jpg",
+      "icon": "/src/images/sports-medicine.png"
+    }
+}  
