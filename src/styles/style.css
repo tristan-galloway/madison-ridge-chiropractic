@@ -295,6 +295,90 @@ main {
   transform: scale(1.2);
 }
 
+/* Schedule Section */
+.appointment-form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #940103;
+}
+.toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+.toggle-btn {
+  padding: 10px 15px;
+  border: 2px solid var(--primary-color);
+  background-color: white;
+  color: var(--primary-color);
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.toggle-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+.instructions {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.required-info {
+  font-size: 14px;
+  color: #333; /* Neutral color for instructions */
+  margin-bottom: 10px;
+}
+.required-asterisk {
+  color: #e53e3e; /* Red color for the asterisk */
+  font-weight: bold;
+}
 
 /* Footer Section */
 footer {
@@ -335,6 +419,7 @@ footer a {
 .social-media a:hover img {
   transform: scale(1.1);
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

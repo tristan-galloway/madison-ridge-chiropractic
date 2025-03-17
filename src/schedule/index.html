@@ -14,7 +14,59 @@
       <!-- Loaded in JS -->
     </header>
     <main>
-        <h1>Schedule</h1>     
+        <h1>Request an Appointment Today!</h1>
+        <section class="appointment-form">
+          <form id="appointmentForm">
+              <!-- Contact Information Section -->
+              <fieldset>
+                <legend>Contact Information</legend>
+            
+                <!-- Instructions for required fields -->
+                <p class="required-info">Fields marked with <span class="required-asterisk">*</span> are required.</p>
+            
+                <label for="firstName">First Name <span class="required-asterisk">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+              
+                <label for="lastName">Last Name <span class="required-asterisk">*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+              
+                <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+              
+                <label for="email">Email <span class="required-asterisk">*</span></label>
+                <input type="email" id="email" name="email" required>
+              </fieldset>
+      
+              <!-- Preferred Appointment Section -->
+              <fieldset>
+                <legend>Preferred Appointment</legend>
+
+                <!-- Instructions -->
+                <p class="instructions">Please select all that apply. You can choose multiple days and times.</p>
+            
+                <!-- Preferred Days -->
+                <label>Preferred Day</label>
+                <div class="toggle-group">
+                    <button type="button" class="toggle-btn" data-value="Monday">Monday</button>
+                    <button type="button" class="toggle-btn" data-value="Tuesday">Tuesday</button>
+                    <button type="button" class="toggle-btn" data-value="Wednesday">Wednesday</button>
+                    <button type="button" class="toggle-btn" data-value="Thursday">Thursday</button>
+                    <button type="button" class="toggle-btn" data-value="Friday">Friday</button>
+                    <button type="button" class="toggle-btn" data-value="Friday">Saturday</button>
+                </div>
+                <input type="hidden" name="dayOfWeek" id="selected-days">
+            
+                <!-- Preferred Times -->
+                <label>Preferred Time</label>
+                <div class="toggle-group">
+                    <button type="button" class="toggle-btn" data-value="Morning">Morning (8 AM - 12 PM)</button>
+                    <button type="button" class="toggle-btn" data-value="Afternoon">Afternoon (12 PM - 5 PM)</button>
+                </div>
+                <input type="hidden" name="timeOfDay" id="selected-times">
+              </fieldset>            
+              <button type="submit">Request Appointment</button>
+          </form>
+      </section>      
     </main>
     <footer id="footer-section">
       <!-- Loaded in JS -->
