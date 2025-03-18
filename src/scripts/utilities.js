@@ -4,7 +4,7 @@ export function loadHeaderFooter() {
     const year = getYear();
 
     header.innerHTML = `
-        <a id="logo" href=""><img src="/images/madison-ridge-chiropractic.png" alt="Logo"></a>
+        <a id="logo" href="/"><img src="/images/madison-ridge-chiropractic.png" alt="Logo"></a>
         <button class="hamburger" aria-label="Toggle Menu">
             &#9776;
         </button>
