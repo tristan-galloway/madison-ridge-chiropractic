@@ -16,7 +16,7 @@ app.post('/send-appointment-request', async (req, res) => {
     const transporter = createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.EMAIL_USER,   // Email from .env
+            user: process.env.EMAIL_FROM,   // Email from .env
             pass: process.env.EMAIL_PASS,   // Password from .env
         },
     });
@@ -24,8 +24,8 @@ app.post('/send-appointment-request', async (req, res) => {
     const formattedPhone = formatPhoneNumber(phone);
 
     const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_OFFICE,
+        from: process.env.EMAIL_FROM,
+        to: process.env.EMAIL_TO,
         subject: 'New Appointment Request',
         html: `
             <div style="font-family: Arial, sans-serif; max-width: 500px; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
