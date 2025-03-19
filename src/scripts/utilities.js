@@ -4,7 +4,7 @@ export function loadHeaderFooter() {
     const year = getYear();
 
     header.innerHTML = `
-        <a id="logo" href=""><img src="/images/madison-ridge-chiropractic.png" alt="Logo"></a>
+        <a id="logo" href="/"><img src="/images/madison-ridge-chiropractic.png" alt="Logo"></a>
         <button class="hamburger" aria-label="Toggle Menu">
             &#9776;
         </button>
@@ -59,13 +59,10 @@ function setActiveNav() {
 export function initHamburgerMenu() {
     const hamburger = document.querySelector(".hamburger");
     const nav = document.querySelector("nav");
-    
-    console.log("Hamburger button Init")
 
     if (hamburger && nav) {
         hamburger.addEventListener("click", () => {
             nav.classList.toggle("open");
-            console.log("Hamburger button pressed")
         });
     }
 }
@@ -84,4 +81,32 @@ export async function loadJSON(path) {
       console.error('Error loading JSON:', error);
       return null;
     }
-  }
+}
+
+export function formatPhoneNumber(phone) {
+    // Remove all non-numeric characters
+    const cleaned = ('' + phone).replace(/\D/g, '');
+
+    // Match the cleaned number to the (XXX) XXX-XXXX format
+    const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+    return match ? `(${match[1]}) ${match[2]}-${match[3]}` : phone; // Return formatted or original if invalid
+}
+
+export function showModal(message) {
+    const modal = document.getElementById('notification-modal');
+    const modalMessage = document.getElementById('modal-message');
+    const closeModal = document.getElementById('close-modal');
+
+    modalMessage.textContent = message;
+    modal.style.display = 'block';
+
+    closeModal.onclick = function () {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}

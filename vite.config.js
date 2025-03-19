@@ -5,7 +5,15 @@ export default defineConfig({
     root: "src/",
     server: {
         port: process.env.PORT || 5173,
-        host: '0.0.0.0'
+        host: '0.0.0.0',
+        proxy: {
+            // Proxy API requests to the Express server
+            '/send-appointment-request': {
+                target: 'http://localhost:3000',  // The URL where your Express server is running
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/send-appointment-request/, '')
+            }
+        }
     },
     preview: {
         port: process.env.PORT || 4173,
