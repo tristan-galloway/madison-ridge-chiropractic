@@ -4,7 +4,8 @@ export function loadHeaderFooter() {
     const year = getYear();
 
     header.innerHTML = `
-        <a id="logo" href="/"><img src="/images/madison-ridge-chiropractic.png" alt="Logo"></a>
+        <a id="logo" href="/"><img src="/images/mrc_logo.svg" alt="Logo"></a>
+        <p id="company_name">Madison Ridge Chiropractic</p>
         <button class="hamburger" aria-label="Toggle Menu">
             &#9776;
         </button>
@@ -26,8 +27,9 @@ export function loadHeaderFooter() {
             <p>Phone: (208) 656-3205</p>
         </section>
         <section class="social-media">
-            <a href="https://www.facebook.com/madisonridgechiro/" target="_blank"><img src="/images/gray-facebook-icon.svg" alt="Facebook Icon"></a>
-            <a href="https://x.com/Madison_Ridge" target="_blank"><img src="/images/gray-twitter-icon.svg" alt="Twitter Icon"></a>
+            <a href="https://www.facebook.com/madisonridgechiro/" target="_blank"><img src="/images/facebook_rounded_icon.svg" alt="Facebook Icon"></a>
+            <a href="https://maps.app.goo.gl/ujfzJB1CZYS4EbCu9" target="_blank"><img src="/images/maps_rounded_icon.svg" alt="Maps Icon"></a>
+            <a href="https://x.com/Madison_Ridge" target="_blank"><img src="/images/twitter_rounded_icon.svg" alt="Twitter Icon"></a>
         </section>
         <section class="hours">
             <h4>Hours</h4>

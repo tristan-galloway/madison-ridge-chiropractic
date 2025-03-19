@@ -52,6 +52,13 @@ header {
   width: auto;
   border-radius: 5px;
 }
+#company_name {
+  color: var(--text-light);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.0em;
+  margin: 0 10px;
+  font-weight: 500;
+}
 nav ul {
   list-style: none;
   margin: 0;
