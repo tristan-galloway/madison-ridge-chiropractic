@@ -7,7 +7,21 @@ import { formatPhoneNumber } from './src/scripts/utilities.js';
 dotenv.config();
 const app = express();
 app.use(express.json()); // Middleware to parse JSON request bodies
-app.use(cors()); // Enable CORS
+
+const allowedOrigins = [
+    'http://localhost:5173', // Vite Dev Server
+    'https://madisonridgechiropractic.onrender.com/' // Replace with your actual deployed front-end URL
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    }
+}));
 
 app.post('/send-appointment-request', async (req, res) => {
     const { firstName, lastName, phone, email, dayOfWeek, timeOfDay } = req.body;

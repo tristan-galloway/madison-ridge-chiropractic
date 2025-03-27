@@ -358,7 +358,8 @@ input, select {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.appointment-form button {
+/* Main form submit button */
+.appointment-form button[type="submit"] {
   width: 100%;
   padding: 12px;
   background-color: var(--primary-color);
@@ -369,16 +370,18 @@ input, select {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-.appointment-form button:hover {
+.appointment-form button[type="submit"]:hover {
   background-color: #aa0003;
   color: var(--text-light);
 }
+/* Toggle button group */
 .toggle-group {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 10px 0;
 }
+/* Default toggle button state */
 .toggle-btn {
   padding: 10px 15px;
   border: 2px solid var(--primary-color);
@@ -389,15 +392,21 @@ input, select {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+/* Hover effect for unselected toggle buttons */
+.toggle-btn:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: var(--primary-color);
+}
+/* Active state */
 .toggle-btn.active {
   background-color: var(--primary-color);
   color: white;
+  border-color: var(--primary-color);
 }
-.instructions {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
-  font-style: italic;
+/* Hover effect when active */
+.toggle-btn.active:hover {
+  background-color: #880002;
+  border-color: #880002;
 }
 .required-info {
   font-size: 14px;
@@ -410,7 +419,6 @@ input, select {
 }
 
 /* Modal Notification Section */
-/* Modal styles */
 .modal {
   display: none; 
   position: fixed;
