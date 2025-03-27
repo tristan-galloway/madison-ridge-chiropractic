@@ -73,6 +73,18 @@ function getYear() {
     return new Date().getFullYear();
 }
 
+export function getCurrentDateTime() {
+    const now = new Date();
+    const formattedDate = now.toLocaleDateString('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric'
+    });
+    const formattedTime = now.toLocaleTimeString('en-US', {
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+    });
+
+    return `${formattedDate} at ${formattedTime}`;
+}
+
 // Function to load a JSON file from a given path
 export async function loadJSON(path) {
     try {
