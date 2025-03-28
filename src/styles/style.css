@@ -358,7 +358,6 @@ input, select {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-/* Main form submit button */
 .appointment-form button[type="submit"] {
   width: 100%;
   padding: 12px;
@@ -374,14 +373,12 @@ input, select {
   background-color: #aa0003;
   color: var(--text-light);
 }
-/* Toggle button group */
 .toggle-group {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 10px 0;
 }
-/* Default toggle button state */
 .toggle-btn {
   padding: 10px 15px;
   border: 2px solid var(--primary-color);
@@ -392,18 +389,15 @@ input, select {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-/* Hover effect for unselected toggle buttons */
 .toggle-btn:hover {
   background-color: rgba(255, 0, 0, 0.1);
   color: var(--primary-color);
 }
-/* Active state */
 .toggle-btn.active {
   background-color: var(--primary-color);
   color: white;
   border-color: var(--primary-color);
 }
-/* Hover effect when active */
 .toggle-btn.active:hover {
   background-color: #880002;
   border-color: #880002;
@@ -446,6 +440,54 @@ input, select {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* Contact Us Page Section */
+.contact-us-containers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 20px auto;
+}
+.contact-us-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  min-height: 300px;
+}
+.contact-us-container h2 {
+  margin-bottom: auto;
+}
+.container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  flex-grow: 1;
+  width: 100%;
+}
+.google-map {
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* Style for all clickable links */
+.contact-us-container a {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+/* Grow effect on hover */
+.contact-us-container a:hover {
+  transform: scale(1.05);
+  color: #aa0003; /* Slightly darker blue on hover */
+}
+
 
 /* Footer Section */
 footer {
@@ -575,6 +617,17 @@ footer a {
   }
   .service-content button {
     margin-top: 10px;
+  }
+
+  /* Contact Us Section */
+  .contact-us-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduce gap for better spacing */
+  }
+  .contact-us-container {
+    min-height: auto; /* Allow containers to shrink based on content */
+    padding: 15px; /* Reduce padding for smaller screens */
   }
 
   /* Footer Section */
