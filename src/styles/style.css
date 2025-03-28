@@ -408,7 +408,8 @@ input, select {
   margin-bottom: 10px;
 }
 .required-asterisk {
-  color: #e53e3e;
+  color: var(--primary-color);
+  font-size: 1.2em;
   font-weight: bold;
 }
 
