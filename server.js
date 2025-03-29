@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { createTransport } from 'nodemailer';
 import cors from 'cors';
-import { formatPhoneNumber } from './src/scripts/utilities.js';
+import { formatPhoneNumber, getCurrentDateTime } from './src/scripts/utilities.js';
 
 dotenv.config();
 const app = express();
@@ -36,11 +36,12 @@ app.post('/send-appointment-request', async (req, res) => {
     });
 
     const formattedPhone = formatPhoneNumber(phone);
+    const currentDate = getCurrentDateTime();
 
     const mailOptions = {
         from: process.env.EMAIL_FROM,
         to: process.env.EMAIL_TO,
-        subject: 'New Appointment Request',
+        subject: `New Appointment Request | ${currentDate}`,
         html: `
             <div style="font-family: Arial, sans-serif; max-width: 500px; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
                 <h2 style="color: #710203; border-bottom: 2px solid #525252; padding-bottom: 10px;">New Appointment Request</h2>
