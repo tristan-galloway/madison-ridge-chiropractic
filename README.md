@@ -9,7 +9,7 @@ It is deployed on **Render.com** and designed with best practices for performanc
 ## Tech Stack & Tools Used
 - Frontend: HTML, CSS, JavaScript, Vite
 - Hosting & Deployment: [Render](https://render.com)
-- Design & Assets: 
+- Design & Assets:
   - [favicon.io](https://favicon.io) - Custom favicons
   - [Google Fonts](https://fonts.google.com) - Typography
   - [Remove BG](https://www.remove.bg) - Image editing
@@ -17,6 +17,7 @@ It is deployed on **Render.com** and designed with best practices for performanc
   - [Pexels](https://www.pexels.com) - Stock images
   - [IconFinder](https://www.iconfinder.com) - Icons
   - [Wireframe.cc](https://wireframe.cc) - Initial wireframing
+  - [Inkscape](https://inkscape.org) - SVG editing
 
 ## Key Features
 - ✅ Reusable Components: Header, footer, and navigation are dynamically inserted using JavaScript.
@@ -37,21 +38,28 @@ It is deployed on **Render.com** and designed with best practices for performanc
    - Responsive header, navigation bar, and footer
    - Custom favicon & logo integration
    - Hero section with a featured image and CTA button
-### 🔧 Ongoing Work
-- Fixing ESLint warnings & code cleanup
-- Adding a live weather widget to enhance the user experience
-### 🚀 Upcoming Features
 - 📞 Contact Page
    - Interactive contact form
    - Embedded Google Maps for location
    - Business contact information section
-- ⭐ Review Us Page
-   - Review submission form
-   - Dynamic review display that updates in real-time
+- 🌐 SEO Optimization
+   - Meta tags and descriptions for better search engine visibility
+### 🔧 Ongoing Work
+- Fixing ESLint warnings & code cleanup
+- Adding a live weather widget to enhance the user experience
 - 📅 Schedule Page
    - Appointment request form
    - Confirmation message upon submission
-
-
+   - Fix Server error when using render.com for appointment requests
+### 🚀 Upcoming Features
+- ⭐ Review Us Page
+   - Review submission form
+   - Dynamic review display that updates in real-time
+- 👨‍⚕️ Chiropractor Page
+   - Profiles for each chiropractor with images and bios
+- 🗓️ Appointment Management System
+   - Switch from sending emails to a server with a database
+   - Backend integration for managing appointments and reviews
+   - User authentication for secure access to appointment requests
 ## Contributions & Feedback
 This project is an ongoing learning experience. If you have any suggestions or feedback, feel free to reach out! 🚀
