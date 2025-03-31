@@ -59,6 +59,11 @@ header {
   margin: 0 10px;
   font-weight: 500;
 }
+#logo-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 nav ul {
   list-style: none;
   margin: 0;
@@ -139,7 +144,7 @@ main {
 }
 .hero-content {
   background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   padding: 40px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -159,16 +164,12 @@ main {
   margin-bottom: 20px;
 }
 .cta-button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
   padding: 12px 24px;
   background-color: var(--primary-color);
   color: var(--text-light);
   font-size: 18px;
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.2s ease;
-  z-index: 2;
 }
 .cta-button:hover {
   background-color: #940103;
@@ -461,6 +462,9 @@ input, select {
 .contact-us-container h2 {
   margin-bottom: auto;
 }
+.contact-us-container P, .contact-us-container a {
+  font-size: 1.2em;
+}
 .container-content {
   display: flex;
   flex-direction: column;
@@ -489,6 +493,43 @@ input, select {
   color: #aa0003; /* Slightly darker blue on hover */
 }
 
+/* Review Us Page Section */
+.form-container {
+  justify-content: center;
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.submit-btn {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #aa0003;
+}
 
 /* Footer Section */
 footer {
@@ -586,7 +627,6 @@ footer a {
     font-size: 16px;
   }
   .cta-button {
-
     display: block;
     margin: 20px auto;
     text-align: center;
@@ -594,7 +634,6 @@ footer a {
     padding: 14px 24px;
     font-size: 18px;
     left: 50%;
-    transform: translateX(-50%);
   }
 
   /* Services Section */
