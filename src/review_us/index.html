@@ -40,7 +40,22 @@
       <!-- Loaded in JS -->
     </header>
     <main>
-        <h1>Review Us</h1>          
+      <h1 id="page-header">Reviw Us</h1>
+      <div class="form-container">
+        <h2>Leave a Review</h2>
+        <form action="/submit-review" method="POST">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_initial">Last Initial:</label>
+            <input type="text" id="last_initial" name="last_initial" maxlength="1" required>
+
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+    </div>          
     </main>
     <footer id="footer-section">
       <!-- Loaded in JS -->
