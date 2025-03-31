@@ -6,11 +6,11 @@ import { formatPhoneNumber, getCurrentDateTime } from './src/scripts/utilities.j
 
 dotenv.config();
 const app = express();
-app.use(express.json()); // Middleware to parse JSON request bodies
+app.use(express.json());
 
 const allowedOrigins = [
-    'http://localhost:5173', // Vite Dev Server
-    'https://madisonridgechiropractic.onrender.com/' // Replace with your actual deployed front-end URL
+    'http://localhost:5173',
+    'https://madisonridgechiropractic.onrender.com/'
 ];
 
 app.use(cors({
@@ -30,8 +30,8 @@ app.post('/send-appointment-request', async (req, res) => {
     const transporter = createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.EMAIL_FROM,   // Email from .env
-            pass: process.env.EMAIL_PASS,   // Password from .env
+            user: process.env.EMAIL_FROM,
+            pass: process.env.EMAIL_PASS,
         },
     });
 
