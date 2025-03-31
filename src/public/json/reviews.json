@@ -1,43 +1,43 @@
 {
     "reviews": [
         {
-            "fname": "Eliza",
-            "lname": "R",
+            "first_name": "Eliza",
+            "last_initial": "R",
             "review": "Everyone was so nice and super helpful! Dr White took the time to really explain things to me and I really Appreciated that. And my adjustment felt great! Definitely will be back!"
         },
         {
-            "fname": "Jordan",
-            "lname": "S",
+            "first_name": "Jordan",
+            "last_initial": "S",
             "review": "Dr. White is amazing! He is professional, extremely knowledgeable, and cares about his patients. My teenage daughter and I have been patients here for years, and it has always been an excellent experience. Dr. Smith has a wide variety of treatments and always thoroughly explains what he is doing and why along with suggestions for care at home. Plan for a bit of extra wait time before you get back to the room. I do not mind the wait because I know he is not rushing his other patients and I know he will provide me with the same courtesy. I tried a few other chiropractors in town before Madison Ridge, and they provide BY FAR the best experience!!"
         },
         {
-            "fname": "Pete",
-            "lname": "M",
+            "first_name": "Pete",
+            "last_initial": "M",
             "review": "I really liked this place! Very professional and although it was just my first adjustment, I feel like it has helped my neck and back to feel a little better than before. I will be visiting there again when I am in Rexburg."
         },
         {
-            "fname": "Shandy",
-            "lname": "G",
+            "first_name": "Shandy",
+            "last_initial": "G",
             "review": "Madison Ridge Chiropractic is amazing! They are friendly and happy and make you feel comfortable. They work great with my disabled son he loves to go in and get adjusted."
         },
         {
-            "fname": "Dean",
-            "lname": "C",
+            "first_name": "Dean",
+            "last_initial": "C",
             "review": "Exceptional appointment experience. Dr. Nye was fantastic, friendly, knowledgeable and efficient. He was able to assess, determine the issue, and treat a long-term problem and source of pain for me. Impressive office staff also, and a great facility. Very modern, clean and well run. Definitely recommend."
         },
         {
-            "fname": "Katie",
-            "lname": "W",
+            "first_name": "Katie",
+            "last_initial": "W",
             "review": "Clean, friendly and professional. The level of care has always exceeded my expectations here. I feel like Dr. Parkinson’s is very knowledgeable and thorough!! I always enjoy the massage table at the end!"
         },
         {
-            "fname": "Daniel",
-            "lname": "C",
+            "first_name": "Daniel",
+            "last_initial": "C",
             "review": "Doc. Nye is awesome! He’s helped me out everytime I’ve been. Awesome facility. Really nice people. 10/10 recommend." 
         },
         {
-            "fname": "Ashley",
-            "lname": "S",
+            "first_name": "Ashley",
+            "last_initial": "S",
             "review": "Dr. Nye is an awesome chiropractor and takes the time to listen to your concerns and where your pain is and does everything possible to fix the problem the best he can or at least get you as much relief as possible. I would recommend him to anyone. I also love that they not only have an office in Rexburg but also one in St. Anthony which is so much more convenient. His staff are very good people as well they are very friendly and professional."
         }
     ]

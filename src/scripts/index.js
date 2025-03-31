@@ -47,7 +47,7 @@ function updateReviewContent(reviews, currentReviewIndex) {
 
   if (reviewData) {
     document.getElementById("review-text").textContent = reviewData.review;
-    document.getElementById("review-author").textContent = `- ${reviewData.fname} ${reviewData.lname}`;
+    document.getElementById("review-author").textContent = `- ${reviewData.first_name} ${reviewData.last_initial}`;
   }
 }
 
