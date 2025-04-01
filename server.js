@@ -11,7 +11,7 @@ app.use(express.json());
 const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://madisonridgechiropractic.onrender.com/'
+    'https://madisonridgechiropractic.onrender.com'
 ];
 
 app.use(cors({
@@ -51,6 +51,7 @@ app.post('/send-appointment-request', async (req, res) => {
                 <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
                 <p><strong>Preferred Day(s):</strong> ${dayOfWeek}</p>
                 <p><strong>Preferred Time(s):</strong> ${timeOfDay}</p>
+                <p><strong>Time of Request:</strong> ${currentDate}</p>
                 <hr style="border: 0; border-top: 1px solid #ccc;">
                 <p style="font-size: 12px; color: #7f8c8d;">This is an automated email. Please do not reply.</p>
             </div>
