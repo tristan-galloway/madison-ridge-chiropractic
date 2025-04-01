@@ -58,13 +58,13 @@ app.post('/send-appointment-request', async (req, res) => {
 
     try {
         await transporter.sendMail(mailOptions);
-        res.json({ message: "Appointment request sent successfully!" }); // ✅ Send JSON response
+        res.json({ message: "Appointment request sent successfully!" });
     } catch (error) {
         console.error("Error sending email:", error);
-        res.status(500).json({ error: "Error sending email" }); // ✅ Return JSON error response
+        res.status(500).json({ error: "Error sending email" });
     }
 });
 
 // Start the server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Express server running on port ${PORT}`));
