@@ -21,7 +21,7 @@ export default defineConfig({
         allowedHosts: ['madisonridgechiropractic.onrender.com']
     },
     build: {
-        outDir: "../dist", // <-- change here: relative to src/, puts dist in project root
+        outDir: resolve(__dirname, "dist"), // Always output to project root/dist
         emptyOutDir: true,
         rollupOptions: {
             input: {
