@@ -3,9 +3,13 @@ import dotenv from 'dotenv';
 import { createTransport } from 'nodemailer';
 import cors from 'cors';
 import { formatPhoneNumber, getCurrentDateTime } from './src/scripts/utilities.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 const app = express();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 app.use(express.json());
 
 const allowedOrigins = [
@@ -65,6 +69,14 @@ app.post('/send-appointment-request', async (req, res) => {
         console.error("Error sending email:", error);
         res.status(500).json({ error: "Error sending email" });
     }
+});
+
+// Serve static files from the dist directory
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Fallback to index.html for SPA routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 // Start the server
