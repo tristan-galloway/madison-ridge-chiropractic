@@ -9,7 +9,7 @@
     "dev:frontend": "vite",
     "dev:backend": "node server.js",
     "build": "vite build",
-    "start": "vite build && node server.js",
+    "start": "node server.js",
     "preview": "vite preview"
   },
   "author": "Tristan Galloway",
